@@ -20,6 +20,7 @@ export default function Home() {
   const onSubmit = async (form) => {
     setFetching(true);
     const { data } = await fetch(`/api/medication?filter=${form.filter}&value=${form.value}`).then((res) => res.json());
+    console.log(data);
     router.push(`/description/${data[0].REGISTRO}`);
     setFetching(false);
   };
