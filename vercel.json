@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/medication.ts": {
+      "includeFiles": "services/medAnvisaPrice/Providers/medAnvisaPrice.json"
+    }
+  }
+}
