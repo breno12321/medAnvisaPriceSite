@@ -8,11 +8,6 @@ import utilStyles from '../styles/utils.module.css';
 const name = 'Anvisa Med';
 export const siteTitle = 'Anvisa Med';
 
-type Props = {
-  children?: ReactNode;
-  title?: string;
-}
-
 export default function Layout({ children, home }) {
   return (
     <div className="container mx-auto p-4">
