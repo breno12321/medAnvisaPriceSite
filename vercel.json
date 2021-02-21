@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/**": {
+    "pages/api/**": {
       "includeFiles": "services/medAnvisaPrice/Providers/medAnvisaPrice.json"
     }
   }
