@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import medAnvisaPrice from 'services/medAnvisaPrice';
+import medAnvisaPrice from '../../services/medAnvisaPrice';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { filter, value } = req.query;

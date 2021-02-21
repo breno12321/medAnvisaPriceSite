@@ -3,6 +3,7 @@ import filepath from 'helpers/filepath';
 import getConfig from 'next/config';
 import { join } from 'path';
 import { IMedication } from '../interfaces/IMedication';
+import dataJson from './medAnvisaPrice.json';
 
 const { serverRuntimeConfig } = getConfig();
 
@@ -13,8 +14,10 @@ const findFilteredLocal = (
   console.log(serverRuntimeConfig.PROJECT_ROOT);
   try {
     // const data = readFileSync(filepath('./medAnvisaPrice.json'));
-    const data = readFileSync(join(serverRuntimeConfig.PROJECT_ROOT, './services/medAnvisaPrice/Providers/medAnvisaPrice.json'));
-    const parsedData = JSON.parse(Buffer.from(data).toString());
+    // const data = readFileSync(join(serverRuntimeConfig.PROJECT_ROOT, './services/medAnvisaPrice/Providers/medAnvisaPrice.json'));
+    // const parsedData = JSON.parse(Buffer.from(data).toString());
+    const parsedData = dataJson as IMedication[];
+    console.log(parsedData[0]);
     resolve(parsedData.filter((item: IMedication) => item[param] === value));
   } catch (error) {
     reject(error);
